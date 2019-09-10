@@ -20,7 +20,6 @@ def divisibleSumPairs(n, k, ar):
                         continue
                 else:
                     continue
-    print(matching_pairs)
     return len(matching_pairs)
 
 
