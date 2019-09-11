@@ -35,7 +35,7 @@ def consuquence():
     input2=liste[0]
     liste.remove(input2)
     counter=0
-    for i in range(len(liste)-1):
+    for i in range(len(liste)):
         value=liste[i][0]+liste[i][1]
         if value%input2==0:
             counter+=1
