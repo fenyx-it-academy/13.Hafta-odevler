@@ -1,5 +1,6 @@
-arr = [3, 4]
-brr = [24, 48]
+arr = list(map(int, input().rstrip().split()))
+brr = list(map(int, input().rstrip().split()))
+
 list_first = []
 list_result = []
 
