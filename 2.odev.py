@@ -4,19 +4,18 @@
 ##sayısını tespit eden bir fonksiyon yazınız. Bu tür sayılara iki liste
 ##arası sayılar diyeceğiz. Bu tür sayıların sayısını tespit etmeniz gerekmektedir.
 
-a=[2,4]
-b=[16,32,96]
-
-c=a+b
-d=sorted(c)
-aa=[]
-bb=[]
-for i in range(d[0],d[len(d)-1]):
-    if i % a[0] == 0 and i % a[1] == 0 and i not in aa:
-            aa+=[i]
-for t in aa:
-    if b[0] % t == 0 and b[1] % t == 0 and b[2] % t == 0 and t not in bb:
-        bb+=[t]
-
-print('iki liste arası sayılar listesi : ',bb)
-print('iki liste arası: ',len (bb),'adet sayi var')
+def getTotalX(a, b):
+    sayac=0
+    for i in range(max(arr),min(brr)+1):
+        lista=[i%x for x in arr]  
+        liste=[x%i for x in brr] 
+        if lista.count(0)+liste.count(0)==n+m: 
+            sayac+=1                    
+    return sayac
+first_multiple_input = input("Enter two numbers for the length of your lists:").rstrip().split()
+n = int(first_multiple_input[0])
+m = int(first_multiple_input[1])
+arr = list(map(int, input("elements of your first list").rstrip().split()))
+brr = list(map(int, input("elements of your last list:").rstrip().split()))
+total = getTotalX(arr, brr)
+print(total)

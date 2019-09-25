@@ -9,20 +9,26 @@
 ##● ar: array(liste)
 ##● k: sayı çiftlerinin toplamının böleni
 
-ar = [1,3,2,6,1,2]
-k = 3
-n=len(ar)
-liste = []
-for i in ar:
-    for j in ar:
-        if (i+j) % k == 0 and i<j :
-            liste += [(i,j)]
-print('sayı çiftleri : ',liste)
-print('sayı çiftlerinin ( i, j ) sayısı : ',n)
 
+def divisibleSumPairs(n, k, ar):
+    liste=[]
+    for i in range(n) :
+        for j in range(i+1,n) :
+            if (ar[i]+ar[j]) % k == 0 and i<j :
+                liste+=[(i,j)]
+    return len(liste)
+            
+nk = input('deger1').split()
 
+n = int(nk[0])
 
+k = int(nk[1])
 
+ar = list(map(int, input('deger2').rstrip().split()))
+
+result = divisibleSumPairs(n, k, ar)
+
+print(result)
 
 
 
